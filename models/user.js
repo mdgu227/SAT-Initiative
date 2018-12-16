@@ -1,7 +1,5 @@
 var mongoose = require("mongoose");
 var passportLocalMongoose = require("passport-local-mongoose");
-// mongoose.connect('mongodb://localhost:27017/college_readiness_initiative', { useNewUrlParser: true });
-mongoose.connect(DATABASE_URL, { useNewUrlParser: true });
 
 var options = {discriminatorKey: 'userType'};
 

@@ -21,9 +21,8 @@ var express       = require("express"),
     flash         = require('connect-flash'),
     async         = require('async');
 
-// mongoose.connect('mongodb://localhost:27017/college_readiness_initiative', { useNewUrlParser: true });
-mongoose.connect(DATABASE_URL, { useNewUrlParser: true });
-
+var url = process.env.DATABASE_URL || 'mongodb://localhost:27017/college_readiness_initiative';
+mongoose.connect(url, { useNewUrlParser: true });
 
 mongoose.Promise = global.Promise;
 
