@@ -1,6 +1,7 @@
 var mongoose = require("mongoose"); // install mongoose, which allows us to write
                                     // JS that interacts with database
-mongoose.connect('mongodb://localhost:27017/college_readiness_initiative', { useNewUrlParser: true });
+// mongoose.connect('mongodb://localhost:27017/college_readiness_initiative', { useNewUrlParser: true });
+mongoose.connect(DATABASE_URL, { useNewUrlParser: true });
 
 // This is a schema, a plan for what a question in our database looks like:
 var questionSchema = new mongoose.Schema({
