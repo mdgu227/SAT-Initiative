@@ -1,0 +1,22 @@
+<% include ../partials/header %>
+<div class="jumbotron notebookpic">
+    <h1 id="pagetitle">Upload School Name</h1>
+</div>
+<div class="container pagetext">
+    <h3>Current Schools:</h3>
+    <% schools.forEach(function(school) { %>
+        <h4><%= school.name %></h4>
+    <% }) %>
+    <br>
+    <h2><u>Upload New School Name</u></h2>
+    <form name="schoolUP" action="/schoolupload" method="post">
+                <div class="input-group mb-3">
+                                <input type="text" name="schoolNAME" placeholder="Enter School Name">
+                </div>
+                <br />
+                <input type="submit"></button>
+        </form>
+</div>
+
+
+<% include ../partials/footer %>

@@ -1,1 +1,7 @@
+package-lock.json
+data/*
+node_modules/
+mongod
+*.csv
 package.json
+*.swp

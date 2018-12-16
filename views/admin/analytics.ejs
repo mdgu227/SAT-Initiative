@@ -1,0 +1,49 @@
+<% include ../partials/header %>
+  <div class="jumbotron bookstackpic">
+    <h1 id="math">Analytics</h1>
+  </div>
+<div class="container">
+  <table class="table table-bordered table-striped">
+    <thead style="background-color: #e6e6e6;">
+      <th>Total Tutoring Sessions</th>
+      <th></th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Past week: </td>
+        <td><%= weeklyOutput %></td>
+      </tr>
+      <tr>
+        <td>Past month: </td>
+        <td><%= monthlyOutput %></td>
+      </tr>
+      <tr>
+        <td>Past year: </td>
+        <td><%= yearlyOutput %></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <table class="table table-bordered table-striped">
+    <thead style="background-color:#e6e6e6">
+      <th class="thead-light">Students Tutored</th>
+      <th></th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Past week: </td>
+        <td><%= student_weekly %></td>
+      </tr>
+      <tr>
+        <td>Past month: </td>
+        <td><%= student_monthly %></td>
+      </tr>
+      <tr>
+        <td>Past year: </td>
+        <td><%= student_yearly %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<% include ../partials/footer %>

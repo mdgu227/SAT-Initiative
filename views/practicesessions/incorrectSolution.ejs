@@ -1,0 +1,35 @@
+<% include ../partials/header %>
+
+<!-- regex extracts imageID from google drive image -->
+<% var regex = /^\/d\/(.+)/; %>
+<% var imageID = question.image_link.match(/\/d\/(.+?)\/view/)[1]; %>
+<% var imageURL = "https://drive.google.com/uc?export=view&id=" + imageID %>
+<div class="container">
+    <div align="center">
+        <img src="<%= imageURL %>" , alt="Question Image">
+    </div>
+    <h1>Nice try!</h1>
+    <h2>The correct answer is: <%= question.answer %></h2>
+    <h2>Your answer was: <%= answer %></h2>
+    <% var formURL = "/incorrectsolution/" + type %>
+    <form action="<%= formURL %>" method="post">
+        <button class="btn btn-primary mb-2">Next Question</button>
+    </form>
+    <br>
+</div>
+
+<div class="container">
+  <div class="card" style="width: 18rem;">
+    <div class="card-body" style="padding: 10px;">
+      <h4 class="card-title">About this question: </h4>
+      <p class="card-text">Math <%= question.test_num%></p>
+      <p class="card-text">Question <%= question.question_num%> </p>
+      <p class="card-text">Type: <%= question.type%></p>
+      <p class="card-text">Category: <%= question.category%></p>
+      <p class="card-text">Subcategory: <%= question.subcategory%></p>
+    </div>
+  </div>
+</div>
+
+
+<% include ../partials/footer %>

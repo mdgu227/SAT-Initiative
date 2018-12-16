@@ -1,0 +1,24 @@
+<% include ../partials/header %>
+
+<div class="jumbotron notebookpic">
+    <h1 id="pagetitle">Login</h1>
+</div>
+
+<div class="container">
+    <form action="/login" method="POST">
+        <div class="form-group">
+            <label for="usernameInput">Email address</label>
+            <input type="text" class="form-control" id="usernameInput" name="username" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label for="passwordInput">Password</label>
+            <input type="password" class="form-control" id="passwordInput" name="password" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+    <br>
+    <h4><a href="/register">Don't have an account?</a></h4>
+</div>
+
+
+<% include ../partials/footer %>
