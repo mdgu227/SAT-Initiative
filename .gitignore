@@ -5,3 +5,4 @@ mongod
 *.csv
 package.json
 *.swp
+.DS_Store
