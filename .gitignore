@@ -6,3 +6,4 @@ mongod
 package.json
 *.swp
 .DS_Store
+views/authentication/registeradmin.ejs
