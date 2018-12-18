@@ -10,6 +10,10 @@
 			<h4><i class="fa fa-envelope"></i> <%= user.username %></h4>
 			<h4><i class="fa fa-graduation-cap"> </i><%= user.school %>, <%= user.year %></h4>
 			<h4><i class="fas fa-chalkboard-teacher"></i> Tutoring Sessions Attended: <%= user.num_tutoring_sessions%></h4>
+			<h4>Previous SAT Scores:</h4>
+			<h5>Reading: <%= user.past_reading_score %></h5>
+			<h5>Math: <%= user.past_math_score %></h5>
+			<h5>Writing: <%= user.past_writing_score %></h5>
 		</article>
 	</div>
 </div>
